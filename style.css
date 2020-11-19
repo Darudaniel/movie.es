@@ -55,10 +55,10 @@ html {
   font-weight: 600;
 }
 .profile-picture--container {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 1px solid black;
   background-image: url("./assets/icons/elbananero.jpg");
   background-size: cover;
 }
@@ -70,10 +70,21 @@ html {
 }
 
 .nav--container {
-  display: grid;
-  grid-template-rows: repeat(9, 1fr);
-  grid-template-areas: "home trending likes . . . . . settings";
   background-color: #FC6463;
+  padding: 10px;
+}
+.ul--container {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:  "home"
+                        "trending"
+                        "likes"
+                        "."
+                        "."
+                        "."
+                        "."
+                        "settings";
+  height: 100%;
 }
 
 .home {
@@ -89,11 +100,60 @@ html {
   grid-area: settings;
 }
 
+.home span, .trending span, .likes span, .settings span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin-top: 50px;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home span {
+  background-image: url("./assets/icons/SVG/home3.svg");
+}
+.trending span {
+  background-image: url("./assets/icons/SVG/fire.svg");
+}
+.likes span {
+  background-image: url("./assets/icons/SVG/heart.svg");
+}
+.settings span {
+  background-image: url("./assets/icons/SVG/cog.svg");
+}
+
+
+
 .content--container {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   padding: 50px;
+  height: auto;
 }
+.cine, .critic, .no-lost {
+  display: grid;
+  grid-template: 20px 1fr / repeat(3, auto) ;  
+  grid-template-areas: "category category category"
+                        "movie-1 movie-2 movie-3";
+  gap: 10px;
+}
+
+.category {
+  grid-area: category;
+}
+
+.movie-1 {
+  grid-area: movie-1;
+}
+.movie-2 {
+  grid-area: movie-2;
+}
+.movie-3 {
+  grid-area: movie-3;
+}
+
 .content--container img {
   max-width: 400px;
+  width: 100%;
 }
