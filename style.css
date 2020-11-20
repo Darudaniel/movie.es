@@ -124,20 +124,24 @@ header{
   background-position: center;
   background-repeat: no-repeat;
 }
-.home span {
-  background-image: url("./assets/icons/SVG/home3.svg");
-}
-.trending span {
-  background-image: url("./assets/icons/SVG/fire.svg");
-}
-.likes span {
-  background-image: url("./assets/icons/SVG/heart.svg");
-}
-.settings span {
-  background-image: url("./assets/icons/SVG/cog.svg");
-}
 
-
+#home-icon {
+  font-size: 5rem;
+  color: white;
+}
+#trending-icon {
+  font-size: 5.5rem;
+  color: white;
+  margin-left: 8px;
+}
+#like-icon {
+  font-size: 5.5rem;
+  color: white;
+}
+#settings-icon {
+  font-size: 5.5rem;
+  color: white;
+}
 
 .content--container {
   display: grid;
@@ -185,7 +189,7 @@ header{
 }
 
 .post-overlay {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgb(253,101,100, 0.5);
   position: relative;
   top: -51%;  
   width: 100%;
