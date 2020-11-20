@@ -10,9 +10,18 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
 }
 
-
+header{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  -webkit-box-shadow: 0px 10px 26px -2px rgba(0,0,0,0.49); 
+  box-shadow: 0px 10px 26px -2px rgba(0,0,0,0.49);
+  display: inline-block;
+  width: 100%;
+}
 .hero--container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -29,10 +38,10 @@ html {
   background-image: url("./assets/icons/popcorn.png");
   background-size: cover;
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
-  vertical-align: -60%;
+  vertical-align: -30%;
 
 }
 .search-bar {
@@ -46,6 +55,7 @@ html {
   grid-area: user;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .user p{
   margin-left: 80px;
@@ -66,12 +76,13 @@ html {
 
 .main--container {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: auto 1fr;
 }
 
 .nav--container {
   background-color: #FC6463;
-  padding: 10px;
+  padding: 30px;
+
 }
 .ul--container {
   display: grid;
@@ -85,6 +96,9 @@ html {
                         "."
                         "settings";
   height: 100%;
+}
+.ul--container li {
+  list-style: none;
 }
 
 .home {
@@ -102,10 +116,10 @@ html {
 
 .home span, .trending span, .likes span, .settings span {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   padding: 10px;
-  margin-top: 50px;  
+  margin-top: 30px;  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,15 +142,22 @@ html {
 .content--container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding: 50px;
+  padding: 30px 50px;
   height: auto;
+  justify-self: center;
+}
+.content--container h2 {
+  font-size: 2.2rem;
+  padding-top: 35px;
 }
 .cine, .critic, .no-lost {
   display: grid;
   grid-template: 20px 1fr / repeat(3, auto) ;  
   grid-template-areas: "category category category"
                         "movie-1 movie-2 movie-3";
-  gap: 10px;
+  
+  row-gap: 60px;
+  column-gap: 70px;
 }
 
 .category {
@@ -156,4 +177,29 @@ html {
 .content--container img {
   max-width: 400px;
   width: 100%;
+  border-radius: 4px;
+}
+
+.content--container img:hover {
+  
+}
+
+.post-overlay {
+  background-color: rgba(0, 0, 0, .4);
+  position: relative;
+  top: -51%;  
+  width: 100%;
+  max-width: 400px;
+  height: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.movie-1:hover .post-overlay, .movie-2:hover .post-overlay, .movie-3:hover .post-overlay {
+  display: flex;
+  flex-direction: column;
 }
